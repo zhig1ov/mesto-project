@@ -1,0 +1,167 @@
+.page {
+  background-color: #000000;
+}
+
+.page__header {
+  max-width: 880px;
+  padding: 0 200px;
+  margin: 45px auto 40px;
+}
+
+.header {
+  min-height: 74px;
+  position: relative;
+  
+}
+
+.header_border {
+  border-bottom: 1px solid #545454;;
+  max-width: 1280px;
+  padding: 0 200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  min-height: 74px;
+
+}
+
+.profile {
+  display: flex;
+}
+
+.page__profile {
+  max-width: 880px;
+  padding: 0 200px;
+  margin: 0 auto 50px;
+}
+
+.profile__avatar {
+  background-image: url(./images/avatar.jpg);
+  width: 169px;
+  height: 128px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+
+.elipse {
+  background: #C4C4C4;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profile__info {
+  min-width: 336px;
+}
+
+.profile__name {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  color: #FFFFFF;
+  margin: 0 0 16px;
+}
+
+.profile__description {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.cards {
+  
+}
+
+.page__cards {
+  max-width: 880px;
+  padding: 0 200px;
+  margin: 0 auto 66px
+}
+
+.cards__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+  gap: 20px 17px;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0;
+}
+
+.cards__item {
+  background-color: white;
+  object-fit: cover;
+  max-width: 282px;
+  max-height: 361px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+
+.cards__img {
+  width: 100%;
+}
+
+.cards__text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin: 21px 0 31px;
+  margin-left: 21px;
+}
+
+.zz {
+  max-width: 282px;
+  height: 361px; 
+  margin: 0 auto 50px;
+}
+
+.qq {
+  max-width: 282px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 0 auto 50px;
+
+}
+
+.ss {
+  
+}
+
+
+
+
+
+
+
+.footer {
+
+}
+
+.page__footer {
+  max-width: 880px;
+  padding: 0 200px;
+  margin: 45px auto 40px;
+}
+
+.footer__copyrating {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #545454;
+  margin: 0 0 60px;
+}
