@@ -9,7 +9,6 @@
 }
 
 
-
 .header {
   min-height: 74px;
   position: relative;
@@ -32,15 +31,6 @@
   }
 }
 
-.header_border {
-  border-bottom: 1px solid #545454;;
-  max-width: 1280px;
-  padding: 0 200px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  min-height: 74px;
-
-}
 
 .page__profile {
   max-width: 880px;
@@ -56,8 +46,6 @@
 .profile {
   display: flex;
 }
-
-
 
 
 .profile__avatar {
@@ -96,8 +84,16 @@
   font-size: 42px;
   line-height: 48px;
   color: #FFFFFF;
-  margin: 0 0 16px;
+  margin: 0 18px 16px 0;
 }
+
+.profile__name-edit {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+
 
 .profile__description {
   font-family: 'Inter';
@@ -122,6 +118,7 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  align-self: flex-end;
 }
 
 .profile__add-button:hover {
@@ -136,13 +133,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  position: absolute;
-  top: 15px;
-  right: 0;
+  align-self: initial;
   border: none;
   box-sizing: border-box;
   cursor: pointer;
   background-color: black;
+
+
 }
 
 .profile__edit-button:hover {
@@ -286,7 +283,8 @@
     text-align: center;
     font-size: 27px;
     line-height: 33px;
-    margin: 0 0 14px;
+    margin-bottom: 14px;
+    margin-right: 10px;
   }
   .profile__edit-button {
     top: 8px;
@@ -403,7 +401,7 @@ display: block;
   color: black;
   height: 30px;
   box-sizing: border-box;
-  border-bottom: 1px solid #dbdbdb;;
+  border-bottom: 1px solid #dbdbdb;
 
 }
 
