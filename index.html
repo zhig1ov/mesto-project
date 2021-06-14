@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesto</title>
-    <link rel="stylesheet" href="./vendor/normalize.css">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./vendor/font.css">
+    <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
   <header class="header page__header">
@@ -21,51 +19,51 @@
       <div class="profile__info">
         <div class="profile__name-edit">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button type="button" class="profile__edit-button"></button>
+          <button type="button" class="profile__button-edit"></button>
         </div>
         <p class="profile__description">Исследователь океана</p>>
       </div>
-      <button type="button" class="profile__add-button"></button>
+      <button type="button" class="profile__button-add"></button>
     </section>
     <section class="cards page__cards">
       <ul class="cards__items">
         <li class="cards__item">
-          <img src="./images/karachaevsk.jpg" alt="" class="cards__img">
+          <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="cards__img">
             <p class="cards__text">Карачаевск</p>
             <button type="submit" class="cards__like"></button>
         </li>
         <li class="cards__item">
-          <img src="./images/elbrus.jpg" alt="" class="cards__img">
-          <div class="pp">
+          <img src="./images/elbrus.jpg" alt="Эльбрус" class="cards__img">
+          <div class="cards__interaction">
             <p class="cards__text">Гора Эльбрус</p>
             <button type="submit" type="submit" class="cards__like"></button>
           </div>
         </li>
         <li class="cards__item">
-          <img src="./images/dombay.png" alt="" class="cards__img">
-          <div class="pp">
+          <img src="./images/dombay.png" alt="Домбай" class="cards__img">
+          <div class="cards__interaction">
             <p class="cards__text">Домбай</p>
             <button type="submit" class="cards__like"></button>
           </div>
         </li>
         <li class="cards__item">
-          <img src="./images/elbrus.jpg" alt="" class="cards__img">
-          <div class="pp">
+          <img src="./images/elbrus.jpg" alt="Эльбрус" class="cards__img">
+          <div class="cards__interaction">
             <p class="cards__text">Гора Эльбрус</p>
             <button type="submit" class="cards__like"></button>
           </div>
         </li>
         <li class="cards__item">
-          <img src="./images/dombay.png" alt="" class="cards__img">
-          <div class="pp">
+          <img src="./images/dombay.png" alt="Домбай" class="cards__img">
+          <div class="cards__interaction">
             <p class="cards__text">Домбай</p>
             <button type="submit" class="cards__like"></button>
           </div> 
         </li>
         <li class="cards__item">
-          <img src="./images/karachaevsk.jpg" alt="" class="cards__img">
-          <div class="pp">
-            <p class="cards__text">Карачаево-Ч...</p>
+          <img src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия" class="cards__img">
+          <div class="cards__interaction">
+            <p class="cards__text">Карачаево-Черкессия</p>
             <button type="submit" class="cards__like"></button>
           </div>
         </li>
@@ -75,12 +73,11 @@
   <footer class="footer page__footer">
     <p class="footer__copyrating">© 2021 Mesto Russia</p>
   </footer>
-
-  <div class="popup popup__opene">
+  <div class="popup">
     <div class="popup__container">
       <p class="popup__heading">Редактировать профиль</p>
-      <form action="#" method="get" class="form" name="user-information">
-        <input type="text" name="name" value="Жак-Ив Кусто" class="form__item popup__input-name">
+      <form action="#" method="get" class="form" name="user-information" class="form">
+        <input type="text" name="name" value="Жак-Ив Кусто" class="form__item form__input-name">
         <input type="text" name="about-me" value="Исследователь океана" class="form__item form__input-about">
         <button type="submit" class="popup__submit-button">Сохранить</button>
       </form>
