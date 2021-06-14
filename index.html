@@ -11,7 +11,7 @@
 </head>
 <body class="page">
   <header class="header page__header">
-    <img src="./images/Vector.svg" alt="Логотип">
+    <img src="./images/Vector.svg" alt="Логотип" class="header__img">
   </header>
   <main class="content">
     <section class="profile page__profile">
@@ -21,7 +21,7 @@
       <div class="profile__info">
         <h1 class="profile__name">Жак-Ив Кусто</h1>
         <p class="profile__description">Исследователь океана</p>
-        <div class="profile__edit-button"></div>
+        <button class="profile__edit-button"></button>
       </div>
       <button class="profile__add-button"></button>
     </section>
@@ -74,6 +74,16 @@
     <p class="footer__copyrating">© 2021 Mesto Russia</p>
   </footer>
 
-  
+  <div class="popup">
+    <div class="popup__container">
+      <p class="popup__heading">Редактировать профиль</p>
+      <input type="text" name="name" input="Жак-Ив Кусто" class="form__item popup__input-name">
+      <input type="text" name="aboutme" input="Исследователь океана" class="form__item popup__input-about">
+      
+      <button type="submit" class="form__submit-button">Сохранить</button>
+      <div class="popup__close">
+      </div>
+    </div>
+  </div>
 </body>
 </html>
