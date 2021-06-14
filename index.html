@@ -21,50 +21,50 @@
       <div class="profile__info">
         <h1 class="profile__name">Жак-Ив Кусто</h1>
         <p class="profile__description">Исследователь океана</p>
-        <button class="profile__edit-button"></button>
+        <button type="button" class="profile__edit-button"></button>
       </div>
-      <button class="profile__add-button"></button>
+      <button type="button" class="profile__add-button"></button>
     </section>
     <section class="cards page__cards">
       <ul class="cards__items">
         <li class="cards__item">
           <img src="./images/karachaevsk.jpg" alt="" class="cards__img">
             <p class="cards__text">Карачаевск</p>
-            <button type="button" class="cards__like"></button>
+            <button type="submit" class="cards__like"></button>
         </li>
         <li class="cards__item">
           <img src="./images/elbrus.jpg" alt="" class="cards__img">
           <div class="pp">
             <p class="cards__text">Гора Эльбрус</p>
-            <button class="cards__like"></button>
+            <button type="submit" type="submit" class="cards__like"></button>
           </div>
         </li>
         <li class="cards__item">
           <img src="./images/dombay.png" alt="" class="cards__img">
           <div class="pp">
             <p class="cards__text">Домбай</p>
-            <button class="cards__like"></button>
+            <button type="submit" class="cards__like"></button>
           </div>
         </li>
         <li class="cards__item">
           <img src="./images/elbrus.jpg" alt="" class="cards__img">
           <div class="pp">
             <p class="cards__text">Гора Эльбрус</p>
-            <button class="cards__like"></button>
+            <button type="submit" class="cards__like"></button>
           </div>
         </li>
         <li class="cards__item">
           <img src="./images/dombay.png" alt="" class="cards__img">
           <div class="pp">
             <p class="cards__text">Домбай</p>
-            <button class="cards__like"></button>
+            <button type="submit" class="cards__like"></button>
           </div> 
         </li>
         <li class="cards__item">
           <img src="./images/karachaevsk.jpg" alt="" class="cards__img">
           <div class="pp">
             <p class="cards__text">Карачаево-Ч...</p>
-            <button class="cards__like"></button>
+            <button type="submit" class="cards__like"></button>
           </div>
         </li>
       </ul>
@@ -74,15 +74,15 @@
     <p class="footer__copyrating">© 2021 Mesto Russia</p>
   </footer>
 
-  <div class="popup">
+  <div class="popup popup__opene">
     <div class="popup__container">
       <p class="popup__heading">Редактировать профиль</p>
-      <input type="text" name="name" input="Жак-Ив Кусто" class="form__item popup__input-name">
-      <input type="text" name="aboutme" input="Исследователь океана" class="form__item popup__input-about">
-      
-      <button type="submit" class="form__submit-button">Сохранить</button>
-      <div class="popup__close">
-      </div>
+      <form action="#" method="get" class="form" name="user-information">
+        <input type="text" name="name" value="Жак-Ив Кусто" class="form__item popup__input-name">
+        <input type="text" name="about-me" value="Исследователь океана" class="form__item form__input-about">
+        <button type="submit" class="popup__submit-button">Сохранить</button>
+      </form>
+      <a href="#" class="popup__close"></a>
     </div>
   </div>
 </body>

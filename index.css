@@ -13,9 +13,14 @@
 .header {
   min-height: 74px;
   position: relative;
-  opacity: 0.7;
+
   border-bottom: 1px solid #545454
   
+}
+
+.header__img {
+  cursor: pointer;
+  position: relative;
 }
 
 @media screen and (max-width: 917px) {
@@ -119,19 +124,29 @@
   cursor: pointer;
 }
 
+.profile__add-button:hover {
+  opacity: 0.6;
+}
+
+
 .profile__edit-button {
   width: 24px;
   height: 24px;
-  background-image: url(./images/edit.svg);
+  background-image: url(./images/edit.png);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
   top: 15px;
   right: 0;
-  border: 1px solid #FFFFFF;
+  border: none;
   box-sizing: border-box;
   cursor: pointer;
   background-color: black;
+}
+
+.profile__edit-button:hover {
+  opacity: 0.6;
 }
 
 .cards {
@@ -140,7 +155,7 @@
 
 .page__cards {
   max-width: 880px;
-  margin: 0 auto 66px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1023px) {
@@ -204,6 +219,15 @@
   bottom: 30px;
 }
 
+.cards__like:hover {
+  opacity: 0.5;
+}
+
+
+.cards__like:active {
+  background-image: url(./images/heart-black.svg);
+}
+
 .pp {
   display: flex;
   justify-content: space-between;
@@ -212,16 +236,20 @@
 
 .footer {
 
+  max-width: 880px;
+
+  padding: 67px 0 60px;
 }
 
 .page__footer {
-  max-width: 880px;
-  margin: 45px auto 40px;
+  margin: 0 auto;
+  
 }
 
 @media screen and (max-width: 1023px) {
-  .page__footer {
-    padding: 0 19px;
+  .footer {
+    padding-right: 19px;
+    padding-left: 19px;
   }
 }
 
@@ -232,7 +260,7 @@
   font-size: 18px;
   line-height: 22px;
   color: #545454;
-  margin: 0 0 60px;
+  margin: 0;
 }
 
 @media screen and (max-width: 917px) {
@@ -277,7 +305,7 @@
   .page__profile {
     margin-bottom: 36px;
   }
-  .page__footer {
+  .footer {
     max-width: 581px;
   }
 }
@@ -307,7 +335,7 @@
   position: relative;
 }
 
-.form__submit-button {
+.popup__submit-button {
   min-width: 358px;
   min-height: 50px;
   display: flex;
@@ -326,6 +354,11 @@
   line-height: 22px;
   text-align: center;
   margin: 0 auto 37px;
+  cursor: pointer;
+}
+
+.popup__submit-button:hover {
+  opacity: 0.8;
 }
 
 .popup__heading {
@@ -349,18 +382,20 @@ font-weight: normal;
 font-size: 14px;
 line-height: 17px;
 color: #000000;
+display: block;
 }
 
-.popup__input-about {
+
+.form__input-about {
 margin: 0 auto 48px;
 min-width: 358px;
-font-family: Inter;
+font-family: 'Inter';
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 17px;
 color: #000000;
-
+display: block;
 }
 
 .form__item {
@@ -368,9 +403,12 @@ color: #000000;
   color: black;
   height: 30px;
   box-sizing: border-box;
-  
-  border-bottom: 1px solid #000000;
-  background-color: transparent;
+  border-bottom: 1px solid #dbdbdb;;
+
+}
+
+.form__item:focus {
+  outline-color: black;
 }
 
 .popup__close {
@@ -382,8 +420,83 @@ color: #000000;
   position: absolute;
   top: -40px;
   right: -40px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 717pxa) {
+.popup__close:hover {
+  opacity: 0.6;
   
 }
+
+.popup__opened {
+  display: flex;
+}
+
+@media screen and (max-width: 618px) {
+  .popup__container {
+    min-width: 282px;
+    min-height: 322px;
+  }
+}
+
+
+@media screen and (max-width: 618px) {
+  .popup__heading {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 25px auto 75px;
+}
+
+
+@media screen and (max-width: 618px) {
+  .popup__submit-button {
+    min-width: 238px;
+    min-height: 46px;
+  }
+}
+
+
+@media screen and (max-width: 618px) {
+  .popup__input-name {
+    min-width: 238px;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .form__input-about {
+    min-width: 238px;
+    margin-bottom: 45px;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .popup__close {
+    right: 0;
+    top: -77px;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .footer__copyrating{
+    font-size: 14px;
+   line-height: 17px;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .footer {
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+
+@media screen and (max-width: 320px) {
+  .footer{
+    max-width: 282px;
+  }
+}
+
+
+
+
+
+
