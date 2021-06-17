@@ -9,6 +9,7 @@
   background-position: center;
   cursor: pointer;
   margin-right: 20px;
+  transition: ease-out 0.5s;
 }
 
 .cards__like:hover {
