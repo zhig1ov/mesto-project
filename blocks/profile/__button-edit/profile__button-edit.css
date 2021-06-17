@@ -10,7 +10,7 @@
   box-sizing: border-box;
   cursor: pointer;
   background-color: black;
-  transition: ease-out 0.5s;
+  transition: opacity ease-out 0.5s;
 }
 
 

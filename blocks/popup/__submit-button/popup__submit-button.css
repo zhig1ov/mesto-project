@@ -18,7 +18,7 @@
   text-align: center;
   margin: 0 auto 37px;
   cursor: pointer;
-  transition: ease-out 0.5s;
+  transition: opacity ease-out 0.5s;
 }
 
 .popup__submit-button:hover {
