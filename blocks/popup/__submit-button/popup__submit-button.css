@@ -16,7 +16,7 @@
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  margin: 0 auto 28px;
+  margin: 0 auto;
   cursor: pointer;
   transition: opacity ease-out 0.5s;
 }
@@ -31,6 +31,5 @@
     min-height: 46px;
     font-size: 14px;
     line-height: 17px;
-    margin-bottom: 19px;
   }
 }
