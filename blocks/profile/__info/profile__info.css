@@ -1,14 +1,14 @@
 .profile__info {
   min-width: 336px;
-  display: flex;
-  flex-direction: column;
+  display: block;
   position: relative;
-  margin-top: 22px;
+  max-height: 61px;
+  margin-bottom: 36px;
 }
+
 
 @media screen and (max-width: 917px) {
   .profile__info {
-    margin: 0 auto 36px;
     min-width: 282px;
   }
 }

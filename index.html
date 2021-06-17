@@ -9,7 +9,7 @@
 </head>
 <body class="page">
   <header class="header page__header">
-    <img src="./images/Vector.svg" alt="Логотип" class="header__img">
+    <img src="./images/vector.svg" alt="Логотип" class="header__img">
   </header>
   <main class="content">
     <section class="profile page__profile">
@@ -19,71 +19,71 @@
       <div class="profile__info">
         <div class="profile__name-edit">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
-          <button type="button" class="profile__button-edit"></button>
+          <button aria-label="Edit" type="button" class="profile__button-edit"></button>
         </div>
-        <p class="profile__description">Исследователь океана</p>>
+        <p class="profile__description">Исследователь океана</p>
       </div>
-      <button type="button" class="profile__button-add"></button>
+      <button aria-label="Add" type="button" class="profile__button-add"></button>
     </section>
     <section class="cards page__cards">
       <ul class="cards__items">
         <li class="cards__item">
           <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="cards__img">
-            <div class="cards__interaction">
-              <p class="cards__text">Карачаевск</p>
-              <button type="submit" class="cards__like"></button>
-            </div>
-        </li>
-        <li class="cards__item">
-          <img src="./images/elbrus.jpg" alt="Эльбрус" class="cards__img">
           <div class="cards__interaction">
-            <p class="cards__text">Гора Эльбрус</p>
-            <button type="submit" class="cards__like"></button>
-          </div>
-        </li>
-        <li class="cards__item">
-          <img src="./images/dombay.png" alt="Домбай" class="cards__img">
-          <div class="cards__interaction">
-            <p class="cards__text">Домбай</p>
-            <button type="submit" class="cards__like"></button>
+            <h2 class="cards__text">Карачаевск</h2>
+            <button aria-label="Like" type="submit" class="cards__like"></button>
           </div>
         </li>
         <li class="cards__item">
           <img src="./images/elbrus.jpg" alt="Эльбрус" class="cards__img">
           <div class="cards__interaction">
-            <p class="cards__text">Гора Эльбрус</p>
-            <button type="submit" class="cards__like"></button>
+            <h2 class="cards__text">Гора Эльбрус</h2>
+            <button aria-label="Like" type="submit" class="cards__like"></button>
           </div>
         </li>
         <li class="cards__item">
           <img src="./images/dombay.png" alt="Домбай" class="cards__img">
           <div class="cards__interaction">
-            <p class="cards__text">Домбай</p>
-            <button type="submit" class="cards__like"></button>
+            <h2 class="cards__text">Домбай</h2>
+            <button aria-label="Like" type="submit" class="cards__like"></button>
+          </div>
+        </li>
+        <li class="cards__item">
+          <img src="./images/elbrus.jpg" alt="Эльбрус" class="cards__img">
+          <div class="cards__interaction">
+            <h2 class="cards__text">Гора Эльбрус</h2>
+            <button aria-label="Like" type="submit" class="cards__like"></button>
+          </div>
+        </li>
+        <li class="cards__item">
+          <img src="./images/dombay.png" alt="Домбай" class="cards__img">
+          <div class="cards__interaction">
+            <h2 class="cards__text">Домбай</h2>
+            <button aria-label="Like" type="submit" class="cards__like"></button>
           </div> 
         </li>
         <li class="cards__item">
           <img src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия" class="cards__img">
           <div class="cards__interaction">
-            <p class="cards__text">Карачаево-Черкессия</p>
-            <button type="submit" class="cards__like"></button>
+            <h2 class="cards__text">Карачаево-Черкессия</h2>
+            <button aria-label="Like" type="button" class="cards__like"></button>
           </div>
         </li>
       </ul>
     </section>
   </main>
   <footer class="footer page__footer">
-    <p class="footer__copyrating">© 2021 Mesto Russia</p>
+    <p class="footer__copyrating">&copy; 2021 Mesto Russia</p>
   </footer>
-  <div class="popup">
+  <div class="popup popup_opened">
     <div class="popup__container">
-      <p class="popup__heading">Редактировать профиль</p>
-      <form action="#" method="get" class="form" name="user-information" class="form">
-        <input type="text" name="name" value="Жак-Ив Кусто" class="form__item form__input-name">
-        <input type="text" name="about-me" value="Исследователь океана" class="form__item form__input-about">
+      <h2 class="popup__heading">Редактировать профиль</h2>
+      <form action="#" method="get" class="form" name="user-information">
+        <input type="text" name="name" value="Жак-Ив Кусто" class="form__input">
+        <input type="text" name="about-me" value="Исследователь океана" class="form__input">
         <button type="submit" class="popup__submit-button">Сохранить</button>
       </form>
-      <a href="#" class="popup__close"></a>
+      <button aria-label="Close" type="button" class="popup__close"></button>
     </div>
   </div>
 </body>
