@@ -13,7 +13,7 @@
   padding: 0;
   outline: none; 
   background-color: transparent;
-  transition: ease-out 0.5s;
+  transition: opacity ease-out 0.5s;
 }
 
 .popup__close:hover {
