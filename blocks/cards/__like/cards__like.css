@@ -20,3 +20,7 @@
 .cards__like:active {
   background-image: url(../../../images/heart-black.svg);
 }
+
+.cards__like_active {
+  background-image: url(../../../images/heart-black.svg);
+}
