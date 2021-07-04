@@ -38,10 +38,31 @@ addCardPopupClose.addEventListener('click', () => {
 
 //Функциональность для работы лайка в карточках
 
-// const cardsItem = document.querySelector('.cards__item')
+const cardsItem = document.querySelector('.cards__item')
 
-// cardsItem.querySelector('.cards__like').addEventListener('click', function(evt) {
-//   evt.target.classList.toggle('cards__like_active')
+cardsItem.querySelector('.cards__like').addEventListener('click', function(evt) {
+  evt.target.classList.toggle('cards__like_active')
+})
+
+//Функциональность редактирования профиля
+
+const formPopupEdit = editPopup.querySelector('.form_type_edit')
+
+const nameInput = document.querySelector('.form__input_type_username')
+const jobInput = document.querySelector('.form__input_type_user-info')
+const profileName = document.querySelector('.profile__name')
+const profileDescription = document.querySelector('.profile__description')
+// const editPopupSaveButton = formPopupEdit.querySelector('.popup__submit-button"')
+
+// editPopupSaveButton.addEventListener('click', () => {
+//   closePopup(editPopup)
 // })
-// const popup = document.querySelector('.popup')//
 
+function formSubmitHandler (evt) {
+  evt.preventDefault()
+  profileName.textContent = nameInput.value
+  profileDescription.textContent = jobInput.value
+}
+
+formPopupEdit.addEventListener('submit', formSubmitHandler); 
+console.log(profileName.textContent)
