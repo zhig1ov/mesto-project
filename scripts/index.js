@@ -6,13 +6,11 @@ const editPopupClose = editPopup.querySelector('.popup__close')
 const addCardPopupClose = addCardPopup.querySelector('.popup__close')
 
 const popupImage = document.querySelector('.popup_type_image')
-const popupImageClose = popupImage.querySelector('.popup__close')
+const closePopupImage = popupImage.querySelector('.popup__close')
 const popupCardImage= document.querySelector('.popup__img')
 const popupImageTitle = popupImage.querySelector('.popup__img-name')
 
 const cardItems = document.querySelector('.cards__items')
-const cardItem = document.querySelector('.cards__item');
-
 
 // Функции для открытия и закрытия попапов =>
 
@@ -23,7 +21,6 @@ function openPopup (popup) {
 function closePopup (popup) {
   popup.classList.remove('popup_opened')
 }
-
 
 //Функциональность для открытия попапов =>
 
@@ -37,7 +34,6 @@ openAddButton.addEventListener('click', () => {
   openPopup(addCardPopup)
 })
 
-
 //Функциональность для закрытия попапов =>
 
 editPopupClose.addEventListener('click', () => {
@@ -48,7 +44,7 @@ addCardPopupClose.addEventListener('click', () => {
   closePopup(addCardPopup)
 })
 
-popupImageClose.addEventListener('click', () => {
+closePopupImage.addEventListener('click', () => {
   closePopup(popupImage)
 })
 
@@ -65,14 +61,13 @@ editPopupSaveButton.addEventListener('click', () => {
   closePopup(editPopup)
 })
 
-function formSubmitHandler (evt) {
+function submitFormHandler (evt) {
   evt.preventDefault()
   profileName.textContent = nameInput.value
   profileDescription.textContent = jobInput.value
 }
 
-formPopupEdit.addEventListener('submit', formSubmitHandler); 
-
+formPopupEdit.addEventListener('submit', submitFormHandler); 
 
 // Функциональность для добавления карточек =>
 
@@ -103,8 +98,6 @@ const initialCards = [
   }
 ];
 
-
-const cardContainer = document.querySelector('.cards__items');
 const formAddCard = document.querySelector('.form_type_add-card');
 const titleCardInput = document.querySelector('.form__input_type_title-card');
 const imageCardInput = document.querySelector('.form__input_type_link-card');
