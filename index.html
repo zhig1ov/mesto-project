@@ -46,8 +46,14 @@
       <div class="popup__container">
         <h2 class="popup__heading">Редактировать профиль</h2>
         <form action="#" method="get" class="form form_type_edit" name="user-information">
-          <input type="text" name="name" value="Жак-Ив Кусто" class="form__input form__input_type_username">
-          <input type="text" name="about-me" value="Исследователь океана" class="form__input form__input_type_user-info">
+          <label for="" class="form__label">
+            <input type="text" name="name" value="Жак-Ив Кусто" class="form__input form__input_type_username" required>
+            <span class="username-input-error form__input-error"></span>
+          </label>
+          <label for="" class="form__label">
+            <input type="text" name="about-me" value="Исследователь океана" class="form__input form__input_type_user-info" required>
+            <span class="user-info-input-error form__input-error"></span>
+          </label>
           <button type="submit" class="popup__submit-button">Сохранить</button>
         </form>
         <button aria-label="Close" type="button" class="popup__close"></button>
@@ -58,10 +64,16 @@
     <div class="popup__body">
       <div class="popup__container">
         <h2 class="popup__heading">Новое место</h2>
-        <form action="#" method="get" class="form form_type_add-card" name="user-information">
-          <input type="text" name="name" placeholder="Название" class="form__input form__input_type_title-card">
-          <input type="text" name="link-to-picture" placeholder="Ссылка на картинку" class="form__input form__input_type_link-card">
-          <button type="submit" class="popup__submit-button">Сохранить</button>
+        <form action="#" method="get" class="form form_type_add-card" name="user-information" novalidate>
+          <label for="" class="form__label">
+            <input type="text" name="name" placeholder="Название" class="form__input form__input_type_title-card" required> 
+            <span class="title-card-input-error form__input-error"></span>
+          </label>
+          <label for="" class="form__label">
+            <input type="text" name="link-to-picture" placeholder="Ссылка на картинку" class="form__input form__input_type_link-card" required>
+            <span class="link-card-input-error form__input-error"></span>
+          </label>
+          <button type="submit" class="popup__submit-button popup__submit-button_error">Сохранить</button>
         </form>
         <button aria-label="Close" type="button" class="popup__close"></button>
       </div>  
@@ -78,5 +90,6 @@
   </div>
   <script src="./scripts/initial-cards.js"></script>
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validation.js"></script>
 </body>
 </html>
