@@ -1,10 +1,7 @@
-.popup__submit-button_error {
+.form__submit-button_disabled {
   background: none;
   border: 1px solid #000000;
   color: #000000;
   opacity: 0.2;
 }
 
-.popup__submit-button_error:hover {
-  opacity: 0.2;
-}
