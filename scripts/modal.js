@@ -1,4 +1,5 @@
-import { popupAddCard, popupImage } from './card.js'
+
+import { popupAddCard, popupImage } from './constants.js'
 
 
 const popupProfile = document.querySelector('.popup_type_edit')
@@ -86,11 +87,11 @@ function submitValueFormUserInfo (evt) {
   closePopup(popupProfile);
 }
 
-function openPopupImage (src, alt, name) {
-  popupCardImage.src = src;
-  popupCardImage.alt = alt;
-  popupImageTitle.textContent = name;
-  openPopup(popupImage);
-}
+// function openPopupImage (src, alt, name) {
+//   popupCardImage.src = src;
+//   popupCardImage.alt = alt;
+//   popupImageTitle.textContent = name;
+//   openPopup(popupImage);
+// }
 
-export { openPopup, openPopupImage, closePopup, popupProfile, nameInput, jobInput, profileName, profileDescription }
+export { openPopup, closePopup, popupProfile, nameInput, jobInput, profileName, profileDescription }
