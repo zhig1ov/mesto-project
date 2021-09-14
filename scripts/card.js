@@ -66,4 +66,3 @@ const loadingCard = () => {
 loadingCard()
 
 export { loadingCard, popupAddCard, popupImage }
-
