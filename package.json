@@ -1,0 +1,19 @@
+{
+  "name": "mesto-project",
+  "version": "0.0.1",
+  "description": "Cервис Mesto: интерактивная страница, куда можно добавлять фотографии, удалять их и ставить лайки. <br/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhig1ov/mesto-project.git"
+  },
+  "author": "Artem Zhiglov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhig1ov/mesto-project/issues"
+  },
+  "homepage": "https://github.com/zhig1ov/mesto-project#readme"
+}
