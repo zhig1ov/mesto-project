@@ -1,7 +1,9 @@
 import { initialCards } from './initial-cards.js'
+import { openPopup } from './modal.js'
+import { popupAddCard, popupImage } from './constants.js'
 
-const popupAddCard = document.querySelector('.popup_type_new-card')
-const popupImage = document.querySelector('.popup_type_image')
+
+
 
 const formAddCard = document.querySelector('.form_type_add-card');
 const titleCardInput = document.querySelector('.form__input_type_title-card');
@@ -66,4 +68,3 @@ const loadingCard = () => {
 loadingCard()
 
 export { loadingCard, popupAddCard, popupImage }
-

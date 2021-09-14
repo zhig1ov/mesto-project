@@ -11,4 +11,3 @@ import { hasInvalidInput } from "./validation.js";
       buttonElement.removeAttribute("disabled", "disabled");
     }
   };
-
