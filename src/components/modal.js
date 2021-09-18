@@ -10,9 +10,6 @@ const PopupImageClose = popupImage.querySelector('.popup__close')
 const buttonProfileEdit  = document.querySelector('.profile__button-edit')
 const buttonAddCard = document.querySelector('.profile__button-add')
 
-const popupCardImage= document.querySelector('.popup__img')
-const popupImageTitle = popupImage.querySelector('.popup__img-name')
-
 const jobInput = document.querySelector('.form__input_type_user-info')
 const nameInput = document.querySelector('.form__input_type_username')
 const profileName = document.querySelector('.profile__name')
