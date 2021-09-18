@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesto</title>
-    <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
   <header class="header page__header">
-    <img src="./images/vector.svg" alt="Логотип" class="header__img">
+    <img src="<%=require('./images/vector.svg')%>" alt="Логотип" class="header__img">
   </header>
   <main class="content">
     <section class="profile page__profile">
@@ -45,10 +44,18 @@
     <div class="popup__body">
       <div class="popup__container">
         <h2 class="popup__heading">Редактировать профиль</h2>
-        <form action="#" method="get" class="form form_type_edit" name="user-information">
-          <input type="text" name="name" value="Жак-Ив Кусто" class="form__input form__input_type_username">
-          <input type="text" name="about-me" value="Исследователь океана" class="form__input form__input_type_user-info">
-          <button type="submit" class="popup__submit-button">Сохранить</button>
+        <form action="#" method="get" class="form form_type_edit" name="user-information" novalidate>
+          <fieldset class="form__fieldset">
+            <label class="form__label">
+              <input type="text" name="username" value="Жак-Ив Кусто" class="form__input form__input_type_username" id="username" minlength="2" maxlength="40" required>
+              <span class="form__input-error" id="username-error"></span>
+            </label>
+            <label class="form__label">
+              <input type="text" name="about-me" value="Исследователь океана" class="form__input form__input_type_user-info" id="about-me" minlength="2" maxlength="200" required>
+              <span class="form__input-error" id="about-me-error"></span>
+            </label>
+          <button type="submit" class="form__submit-button">Сохранить</button>
+          </fieldset>
         </form>
         <button aria-label="Close" type="button" class="popup__close"></button>
       </div>
@@ -58,10 +65,18 @@
     <div class="popup__body">
       <div class="popup__container">
         <h2 class="popup__heading">Новое место</h2>
-        <form action="#" method="get" class="form form_type_add-card" name="user-information">
-          <input type="text" name="name" placeholder="Название" class="form__input form__input_type_title-card">
-          <input type="text" name="link-to-picture" placeholder="Ссылка на картинку" class="form__input form__input_type_link-card">
-          <button type="submit" class="popup__submit-button">Сохранить</button>
+        <form action="#" method="get" class="form form_type_add-card" name="user-information" novalidate>
+          <fieldset class="form__fieldset">
+            <label class="form__label">
+              <input type="text" name="title-card" placeholder="Название" class="form__input form__input_type_title-card" id="title-card" minlength="2" maxlength="30" required> 
+              <span class="form__input-error" id="title-card-error"></span>
+            </label>
+            <label class="form__label">
+              <input type="url" name="link-picture" placeholder="Ссылка на картинку" class="form__input form__input_type_link-card" id="link-picture" required>
+              <span class="form__input-error" id="link-picture-error"></span>
+            </label>
+            <button type="submit" class="form__submit-button">Сохранить</button>
+          </fieldset>
         </form>
         <button aria-label="Close" type="button" class="popup__close"></button>
       </div>  
@@ -70,13 +85,11 @@
   <div class="popup popup_type_image">
     <div class="popup__body">
       <div class="popup__image-container">
-        <img src=".//images/photo-1559426756-14c161f0dae8 1.png" alt="" class="popup__img">
+        <img src="" alt="" class="popup__img">
         <button aria-label="Close" type="button" class="popup__close"></button>
         <p class="popup__img-name">Карачаевск</p>
       </div>
     </div>
   </div>
-  <script src="./scripts/initial-cards.js"></script>
-  <script src="./scripts/index.js"></script>
 </body>
 </html>

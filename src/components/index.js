@@ -1,13 +1,8 @@
 import { enableValidation } from './validation.js'
 import { loadingCard, popupImage } from './card.js'
-import { popupProfile, jobInput, nameInput } from './modal.js'
+import { popupProfile, jobInput, nameInput, closePopup, profileName } from './modal.js'
+import '../pages/index.css';
 
-const popupAddCard = document.querySelector('.popup_type_new-card')
-const buttonProfileEdit  = document.querySelector('.profile__button-edit')
-const buttonAddCard = document.querySelector('.profile__button-add')
-
-const popupCardImage= document.querySelector('.popup__img')
-const popupImageTitle = popupImage.querySelector('.popup__img-name')
 
 //Функциональность редактирования профиля =>
 
@@ -27,11 +22,6 @@ function submitFormProfile (evt) {
 formPopupEdit.addEventListener('submit', submitFormProfile); 
 
 // Функциональность для добавления карточек =>
-
-// const formAddCard = document.querySelector('.form_type_add-card');
-// const titleCardInput = document.querySelector('.form__input_type_title-card');
-// const imageCardInput = document.querySelector('.form__input_type_link-card');
-
 
 enableValidation({formSelector: '.form',
 inputSelector: '.form__input',
