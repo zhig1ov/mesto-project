@@ -1,5 +1,5 @@
 
-import { popupAddCard, popupImage } from './constants.js'
+import { popupAddCard, popupImage, formAddCard } from './constants.js'
 
 
 const popupProfile = document.querySelector('.popup_type_edit')
@@ -17,19 +17,19 @@ const profileDescription = document.querySelector('.profile__description')
 
 function openPopup (popup) {
   popup.classList.add('popup_opened')
-  closePopupOnEsc(popup)
-  closePopupClickOverlay(popup)
+  document.addEventListener('keydown', closePopupOnEsc)
+  popup.addEventListener('click', closePopupClickOverlay);
 }
 
 function closePopup (popup) {
   popup.classList.remove('popup_opened')
-  document.removeEventListener('keydown', popup);
-  popup.removeEventListener('click', popup);
+  document.removeEventListener('keydown', closePopupOnEsc);
+  popup.removeEventListener('click', closePopupClickOverlay);
 }
 
 //Функциональность для открытия попапов =>
 
-buttonProfileEdit .addEventListener('click', () => {
+buttonProfileEdit.addEventListener('click', () => {
   jobInput.value = profileDescription.textContent
   nameInput.value = profileName.textContent
   openPopup(popupProfile)
@@ -37,14 +37,15 @@ buttonProfileEdit .addEventListener('click', () => {
 
 buttonAddCard.addEventListener('click', () => {
   openPopup(popupAddCard)
+  formAddCard.reset()
 })
 
 //Функциональность для закрытия попапов =>
 
 popupProfileClose.addEventListener('click', () => {
   closePopup(popupProfile)
-  
 })
+
 popupCloseAddCard.addEventListener('click', () => {
   closePopup(popupAddCard)
 })
@@ -53,20 +54,18 @@ PopupImageClose.addEventListener('click', () => {
   closePopup(popupImage)
 })
 
-const closePopupOnEsc = (popup) => {
-  document.addEventListener('keydown', (evt)=>{
-    if (evt.key === "Escape") {
-        closePopup(popup);
-    }
-  });
+const closePopupOnEsc = (evt) => {
+  if (evt.key === "Escape") {
+    const popup = document.querySelector(".popup_opened")
+    closePopup(popup);
+  }
 }
 
-const closePopupClickOverlay = (popup) => {
-  popup.addEventListener('click', (evt)=>{
-    if (evt.target.classList.contains('popup__body')) {
-      closePopup(popup);
-    }
-  });
+const closePopupClickOverlay = (evt) => { 
+   if (evt.target.classList.contains('popup__body')) { 
+    const popup = document.querySelector(".popup_opened")
+    closePopup(popup); 
+  } 
 }
 
 //Значение полей редактирования
@@ -85,3 +84,4 @@ function submitValueFormUserInfo (evt) {
 }
 
 export { openPopup, closePopup, popupProfile, nameInput, jobInput, profileName, profileDescription }
+

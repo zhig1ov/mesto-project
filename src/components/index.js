@@ -1,6 +1,6 @@
 import { enableValidation } from './validation.js'
 import { loadingCard, popupImage } from './card.js'
-import { popupProfile, jobInput, nameInput, closePopup, profileName } from './modal.js'
+import { popupProfile, jobInput, nameInput, closePopup, profileName, profileDescription } from './modal.js'
 import '../pages/index.css';
 
 

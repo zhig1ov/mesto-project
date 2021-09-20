@@ -1,6 +1,6 @@
 import { initialCards } from './initial-cards.js'
-import { openPopup } from './modal.js'
-import { popupAddCard, popupImage } from './constants.js'
+import { openPopup, closePopup } from './modal.js'
+import { popupAddCard, popupImage, buttonSubmitAddCard } from './constants.js'
 
 const formAddCard = document.querySelector('.form_type_add-card');
 const titleCardInput = document.querySelector('.form__input_type_title-card');
@@ -10,6 +10,11 @@ const popupCardImage= document.querySelector('.popup__img')
 const popupImageTitle = popupImage.querySelector('.popup__img-name')
 
 const cardItems = document.querySelector('.cards__items')
+
+const disabledButton = _ => {
+  buttonSubmitAddCard.setAttribute("disabled", "disabled")
+  buttonSubmitAddCard.classList.add('form__submit-button_disabled')
+}
 
 function createCard(card) {
   const cardTemplate = document.querySelector('#card-template').content;
@@ -55,6 +60,7 @@ formAddCard.addEventListener('submit', (evt) => {
     link: imageCardInput.value
   })
   formAddCard.reset()
+  disabledButton ()
   closePopup(popupAddCard)
 })
 
