@@ -63,4 +63,4 @@ const enableValidation = ({formSelector, fieldsetSelector, ...rest }) => {
   })
 }
 
-export { hasInvalidInput, enableValidation }
+export { hasInvalidInput, enableValidation, obj }
