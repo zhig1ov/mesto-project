@@ -68,4 +68,4 @@ const loadingCard = () => {
   initialCards.forEach(card => addCard(card))
 }
 
-export { loadingCard, popupAddCard, popupImage }
+export { loadingCard, popupAddCard, popupImage, disabledButton }
