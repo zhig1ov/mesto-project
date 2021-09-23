@@ -1,5 +1,5 @@
-
 import { popupAddCard, popupImage, formAddCard } from './constants.js'
+import { disabledButton } from './card.js'
 
 
 const popupProfile = document.querySelector('.popup_type_edit')
@@ -35,9 +35,14 @@ buttonProfileEdit.addEventListener('click', () => {
   openPopup(popupProfile)
 })
 
-buttonAddCard.addEventListener('click', () => {
-  openPopup(popupAddCard)
+function openPopupCard() {
   formAddCard.reset()
+  disabledButton()
+  openPopup(popupAddCard)
+}
+
+buttonAddCard.addEventListener('click', () => {
+  openPopupCard()
 })
 
 //Функциональность для закрытия попапов =>

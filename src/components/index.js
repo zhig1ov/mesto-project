@@ -7,16 +7,12 @@ import '../pages/index.css';
 //Функциональность редактирования профиля =>
 
 const formPopupEdit = popupProfile.querySelector('.form_type_edit')
-const popupProfileSaveButton = formPopupEdit.querySelector('.form__submit-button')
-
-popupProfileSaveButton.addEventListener('click', () => {
-  closePopup(popupProfile)
-})
 
 function submitFormProfile (evt) {
   evt.preventDefault()
   profileName.textContent = nameInput.value
   profileDescription.textContent = jobInput.value
+  closePopup(popupProfile)
 }
 
 formPopupEdit.addEventListener('submit', submitFormProfile); 
