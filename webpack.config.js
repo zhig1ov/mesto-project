@@ -19,6 +19,9 @@ module.exports = {
     compress: true,
     port: 8080
   },
+  resolve: {
+    extensions: [".wasm", ".ts", ".tsx", ".mjs", ".cjs", ".js", ".json"],
+  },
   module: {
     rules: [{
         test: /\.js$/,

@@ -1,8 +1,9 @@
-import { enableValidation } from './validation.js'
-import { loadingCard, popupImage } from './card.js'
-import { popupProfile, jobInput, nameInput, closePopup, profileName, profileDescription } from './modal.js'
 import '../pages/index.css';
-
+import { enableValidation } from './validation.js'
+import { renderCards, addCardSubmit } from './card.js'
+import { popupProfile, jobInput, nameInput, closePopup, profileName, profileDescription, formAddCard } from './modal.js'
+import { mestoApiConfig, getUserInfo, getCards } from './api.js'
+import { setValueInputProfile, setUserData, submitFormEditProfile } from './profile.js'
 
 //Функциональность редактирования профиля =>
 
@@ -27,4 +28,21 @@ inactiveButtonClass: 'form__submit-button_disabled',
 inputErrorClass: 'form__input_type_error',
 errorClass: 'form__input-error_visible'})
 
-loadingCard()
+// loadingCard()
+
+
+formAddCard.addEventListener('submit', addCardSubmit)
+
+
+
+Promise.all([getUserInfo(), getCards()])
+  .then(([userData, cards]) => {
+    setUserData(userData);
+    setValueInputProfile(userData);
+    const currentUserId = userData._id
+    const dataCards = cards
+    renderCards(dataCards, currentUserId)
+  })
+  .catch((err) => {
+    console.log(err)
+  })

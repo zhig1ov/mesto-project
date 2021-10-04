@@ -2,6 +2,8 @@ import { popupAddCard, popupImage, formAddCard } from './constants.js'
 import { disabledButton } from './card.js'
 
 
+
+
 const popupProfile = document.querySelector('.popup_type_edit')
 const popupProfileClose = popupProfile.querySelector('.popup__close')
 const popupCloseAddCard = popupAddCard.querySelector('.popup__close')
@@ -9,6 +11,8 @@ const PopupImageClose = popupImage.querySelector('.popup__close')
 
 const buttonProfileEdit  = document.querySelector('.profile__button-edit')
 const buttonAddCard = document.querySelector('.profile__button-add')
+
+const buttonSubmitProfile = popupProfile.querySelector('.form__submit-button')
 
 const jobInput = document.querySelector('.form__input_type_user-info')
 const nameInput = document.querySelector('.form__input_type_username')
@@ -88,5 +92,6 @@ function submitValueFormUserInfo (evt) {
   closePopup(popupProfile);
 }
 
-export { openPopup, closePopup, popupProfile, nameInput, jobInput, profileName, profileDescription }
+export { openPopup, closePopup, popupProfile, nameInput, jobInput, profileName, profileDescription, formAddCard }
+
 

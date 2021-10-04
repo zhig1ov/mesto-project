@@ -32,7 +32,12 @@
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.1"
   },
+  "browser": {
+    "crypto": false
+},
   "dependencies": {
-    "core-js": "^3.17.3"
+    "core-js": "^3.17.3",
+    "path": "^0.12.7",
+    "stream": "^0.0.2"
   }
 }

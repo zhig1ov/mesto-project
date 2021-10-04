@@ -29,7 +29,10 @@
             <img src="" alt="" class="cards__img">
             <div class="cards__interaction">
               <h2 class="cards__text"></h2>
-              <button aria-label="Like" type="button" class="cards__like"></button>
+              <div class="cards__like-container">
+                <button aria-label="Like" type="button" class="cards__like"></button>
+                <p class="cards__count-like"></p>
+              </div>
             </div>
             <button aria-label="Delete" type="button" class="cards__delete"></button>
           </li>
@@ -54,7 +57,7 @@
               <input type="text" name="about-me" value="Исследователь океана" class="form__input form__input_type_user-info" id="about-me" minlength="2" maxlength="200" required>
               <span class="form__input-error" id="about-me-error"></span>
             </label>
-          <button type="submit" class="form__submit-button">Сохранить</button>
+          <button type="submit" class="form__submit-button button__saveProfile">Сохранить</button>
           </fieldset>
         </form>
         <button aria-label="Close" type="button" class="popup__close"></button>
