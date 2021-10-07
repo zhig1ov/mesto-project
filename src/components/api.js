@@ -25,9 +25,8 @@ const getUserInfo = () => {
     headers: mestoApiConfig.headers,
   })
   .then(getResponse)
+  
 }
-
-
 
 const deleteCard = (cardId) => {
   return fetch(`${mestoApiConfig.baseUrl}/cards/${cardId}`, {
@@ -38,6 +37,7 @@ const deleteCard = (cardId) => {
     if (!res.ok) return Promise.reject(`Ошибка: ${res.status}`)
   })
 }
+
 
 const updateProfileInfo = (name, about) => {
 return fetch(`${mestoApiConfig.baseUrl}/users/me`, {
@@ -52,9 +52,7 @@ return fetch(`${mestoApiConfig.baseUrl}/users/me`, {
 }
 
 
-
-
-function createNewCard(data) {
+const createNewCard = (data) => {
   return fetch(`${mestoApiConfig.baseUrl}/cards/`, {
     method: "POST",
     headers: mestoApiConfig.headers,
@@ -82,5 +80,16 @@ const deleteLikeCard = (cardId) => {
   .then(getResponse)
 }
 
+const updateAvatar = (url) => {
+  return fetch(`${mestoApiConfig.baseUrl}/users/me/avatar`, {
+    method: "PATCH",
+    headers: mestoApiConfig.headers,
+    body: JSON.stringify({
+      avatar: url,
+    })
+  })
+    .then(getResponse)
+}
 
-export { updateProfileInfo, getUserInfo, deleteCard, createNewCard, getCards, likeCard, deleteLikeCard }
+
+export { updateProfileInfo, getUserInfo, deleteCard, createNewCard, getCards, likeCard, deleteLikeCard, updateAvatar }

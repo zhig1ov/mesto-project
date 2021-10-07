@@ -1,0 +1,8 @@
+.profile__avatar-image {
+  max-width: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity .5s linear;
+}

@@ -1,4 +1,4 @@
-import { openPopup, closePopup } from './modal.js'
+import { openPopup, closePopup, openPopupImage } from './modal.js'
 import { popupAddCard, popupImage, buttonSubmitAddCard } from './constants.js'
 import { deleteCard, createNewCard, likeCard, deleteLikeCard } from './api.js'
 import { setButtonState } from './utils.js'
@@ -7,15 +7,11 @@ import { setButtonState } from './utils.js'
 const formAddCard = document.querySelector('.form_type_add-card');
 const titleCardInput = document.querySelector('.form__input_type_title-card');
 const imageCardInput = document.querySelector('.form__input_type_link-card');
-
-const popupCardImage= document.querySelector('.popup__img')
-const popupImageTitle = popupImage.querySelector('.popup__img-name')
-
 const cardItems = document.querySelector('.cards__items')
 
-const disabledButton = _ => {
-  buttonSubmitAddCard.setAttribute("disabled", "disabled")
-  buttonSubmitAddCard.classList.add('form__submit-button_disabled')
+const disabledButton = (button) => {
+  button.setAttribute("disabled", "disabled")
+  button.classList.add('form__submit-button_disabled')
 }
 
 function createCards(card, user) {
@@ -51,9 +47,9 @@ function createCards(card, user) {
   })
 
   // Отображение по щелчку
-  // cardElement.querySelector('.cards__img').addEventListener('click', () => {
-
-  // })
+  cardElement.querySelector('.cards__img').addEventListener('click', () => {
+    openPopupImage(card.link, card.name, card.name)
+  })
   return cardElement
 }
 
