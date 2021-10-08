@@ -1,11 +1,14 @@
 import { hasInvalidInput } from "./validation.js";
 
+const disabledButton = (button) => {
+  button.setAttribute("disabled", "disabled")
+  button.classList.add('form__submit-button_disabled')
+}
 // Функция изменения состояния кнопки
  const toggleButtonState = (inputList, buttonElement, { inactiveButtonClass }
   ) => {
     if (hasInvalidInput(inputList)) {
-      buttonElement.classList.add(inactiveButtonClass);
-      buttonElement.setAttribute("disabled", "disabled");
+      disabledButton(buttonElement)
     } else {
       buttonElement.classList.remove(inactiveButtonClass);
       buttonElement.removeAttribute("disabled", "disabled");
@@ -18,4 +21,4 @@ import { hasInvalidInput } from "./validation.js";
     buttonLoad.textContent =isSending ? 'Сохранение...' : 'Сохранить';
   }
 
-  export {setButtonState, toggleButtonState}  
+  export {setButtonState, toggleButtonState, disabledButton }  

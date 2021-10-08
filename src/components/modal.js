@@ -1,5 +1,5 @@
 import { popupAddCard, popupImage, formAddCard, popupImageScale, popupImageName, popupAvatar, formEditAvatar } from './constants.js'
-import { disabledButton } from './card.js'
+import { disabledButton } from './utils.js'
 
 
 

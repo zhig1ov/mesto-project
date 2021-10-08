@@ -1,10 +1,10 @@
 import { toggleButtonState } from "./utils.js";
 
-const obj = {
+const formsObj = {
   formSelector: '.form',
   inputSelector: '.form__input',
   submitButtonSelector: '.form__submit-button',
-  fieldsetSelector: '. form__fieldset',
+  fieldsetSelector: '.form__fieldset',
   inactiveButtonClass: 'form__submit-button_disabled',
   inputErrorClass: 'form__input_type_error',
   errorClass: 'form__input-error_visible'
@@ -63,4 +63,4 @@ const enableValidation = ({formSelector, fieldsetSelector, ...rest }) => {
   })
 }
 
-export { hasInvalidInput, enableValidation, obj }
+export { hasInvalidInput, enableValidation, formsObj }

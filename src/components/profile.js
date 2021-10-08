@@ -42,7 +42,7 @@ function submitFormEditProfile(evt) {
    .then((data) => {
     profileAvatar.src = data.avatar;
     formEditAvatar.reset();
-     closePopup(PopupAvatar)
+     closePopup(popupAvatar)
    })
    .catch((err) => {
      console.log(err)

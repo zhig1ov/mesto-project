@@ -9,11 +9,6 @@ const titleCardInput = document.querySelector('.form__input_type_title-card');
 const imageCardInput = document.querySelector('.form__input_type_link-card');
 const cardItems = document.querySelector('.cards__items')
 
-const disabledButton = (button) => {
-  button.setAttribute("disabled", "disabled")
-  button.classList.add('form__submit-button_disabled')
-}
-
 function createCards(card, user) {
   const cardTemplate = document.querySelector('#card-template').content;
 
@@ -138,4 +133,4 @@ function removeCard(evt) {
     })
 } 
 
-export { createCards, addCards, renderCards, addCardSubmit,  disabledButton }
+export { createCards, addCards, renderCards, addCardSubmit }

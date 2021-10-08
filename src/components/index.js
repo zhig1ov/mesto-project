@@ -1,5 +1,5 @@
 import '../pages/index.css';
-import { enableValidation } from './validation.js'
+import { enableValidation, formsObj } from './validation.js'
 import { renderCards, addCardSubmit } from './card.js'
 import { popupProfile, jobInput, nameInput, closePopup, profileName, profileDescription, formAddCard } from './modal.js'
 import { mestoApiConfig, getUserInfo, getCards } from './api.js'
@@ -21,13 +21,7 @@ formPopupEdit.addEventListener('submit', submitFormProfile);
 
 // Функциональность для добавления карточек =>
 
-enableValidation({formSelector: '.form',
-inputSelector: '.form__input',
-submitButtonSelector: '.form__submit-button',
-fieldsetSelector: '.form__fieldset',
-inactiveButtonClass: 'form__submit-button_disabled',
-inputErrorClass: 'form__input_type_error',
-errorClass: 'form__input-error_visible'})
+enableValidation(formsObj)
 
 // loadingCard()
 
